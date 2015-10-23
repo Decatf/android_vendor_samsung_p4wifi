@@ -1,0 +1,48 @@
+How to patch the NVidia binaries for use with libdgv1
+
+	Nexus 7.2012's GL libraries were made to work with Android L, and no sources are 
+	provided. Android M changed one thing around that make it not work: dlopen() is now POSIX 
+	complaint. While this may sound like a good thing, and it is, it still breaks NVIDIA's GL 
+	libraries. Why? Well, they each insist on loading each-other using dlopen. And what do 
+	they pass to dlopen? Strings like "egl/libGLESv2_tegra.so". Why is this a problem? Well, 
+	the POSIX spec says that if dlopen is passed a path that includes a slash, no searching 
+	is done for the requisite library besides in the current working directory. If no slash 
+	is present, a search through a system-specific library search path happens. Previously in 
+	android, the latter behaviour happened all the time, and since /system/lib was in the 
+	search path, asking dlopen to locate "egl/libGLESv2_tegra.so" would corectly find and 
+	load "/system/lib/egl/libGLESv2_tegra.so". In M this is no longer the case, since dlopen 
+	will only search the current working directory. For most android processes, this is just 
+	"/". This is why a simple (but dirty, wrong, and ultimately incomplete) way to solve this 
+	problem is to symlink "/egl" to "/system/lib/egl". But this is a bad solution, since 
+	technically any app can change its working directory, and then it will no longer be able 
+	to use OpenGL. Clearly a better solution is needed.
+
+	NVIDIA's libraries do not call dlopen directly. They call "NvOsLibraryLoad" - an NVIDIA-
+	specific wrapper around dlopen. The implementation of this funtion resides in "libnvos.
+	so". This is our opportunity! Curious information: Due to peculiarities of the ELF 
+	format, when a binary baz imports function foo() from libbar.so, nowhere in baz's ELF 
+	file does it say that foo() must from from libbar. In fact there are two separate 
+	records. One that says that libbar is "NEED"ed, and another that says that there is an 
+	import of function "foo". What that means is that if the process were to also load 
+	libxyz, which also exported foo(), there is no way to be sure which foo() would get 
+	called. Why do we care? Well, consider our problems. We can repalce a NEED record in 
+	NVIDIA's libraries with one referencing a library we control, like "libdgv1.so", replace 
+	the name of the function they call to load libraries from "NvOsLibraryLoad" to something 
+	else, "like dmitrygr_libldr", implement that function in terms of the real 
+	"NvOsLibraryLoad" in "libdgv1.so", while fixing paths, and as long as "libdgv1.so" has a 
+	NEED record referencing libnvos.so, all will go well. This is in fact what I did. Thus 
+	the binary patches to the NVIDIA libraries are minimal (two strings each). The 
+	implementation of "libdgv1.so" I am providing under AOSP license as part of this post. I 
+	would like to once-again emphasize that just symlinking "/egl" is not a proper solution, 
+	since any app that changes its working directory (which is OK and allowed) will thus be 
+	unable to use OpenGL. 
+
+	http://www.dmitry.gr/index.php?r=06.%20Thoughts&proj=04.%20Android%20M%20on%20Grouper
+
+
+
+echo -n dmitrygr_libldr | dd bs=1 seek=6093 conv=notrunc of=libEGL_tegra.so
+echo -n dgv1 | dd bs=1 seek=8677 conv=notrunc of=libEGL_tegra.so
+
+echo -n dmitrygr_libldr | dd bs=1 seek=5546 conv=notrunc of=libGLESv1_CM_tegra.so
+echo -n dgv1 | dd bs=1 seek=8316 conv=notrunc of=libGLESv1_CM_tegra.so
