@@ -107,7 +107,6 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/lib/libnvomxadaptor.so:system/lib/libnvomxadaptor.so \
     vendor/samsung/p4wifi/proprietary/lib/libnvomxilclient.so:system/lib/libnvomxilclient.so \
     vendor/samsung/p4wifi/proprietary/lib/libnvomx.so:system/lib/libnvomx.so \
-    vendor/samsung/p4wifi/proprietary/lib/libnvos.so:system/lib/libnvos.so \
     vendor/samsung/p4wifi/proprietary/lib/libnvparser.so:system/lib/libnvparser.so \
     vendor/samsung/p4wifi/proprietary/lib/libnvrm_graphics.so:system/lib/libnvrm_graphics.so \
     vendor/samsung/p4wifi/proprietary/lib/libnvrm.so:system/lib/libnvrm.so \
