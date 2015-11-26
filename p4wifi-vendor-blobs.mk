@@ -17,7 +17,7 @@
 # Prebuilt libraries that are needed to build open-source libraries
 
 PRODUCT_COPY_FILES := \
-    vendor/samsung/p4wifi/proprietary/bin/gpsd:system/bin/gpsd \
+    vendor/samsung/p4wifi/proprietary/bin/glgps:system/bin/glgps \
     vendor/samsung/p4wifi/proprietary/bin/gps.cer:system/bin/gps.cer \
     vendor/samsung/p4wifi/proprietary/bin/macloader:system/bin/macloader \
     vendor/samsung/p4wifi/proprietary/bin/tegrastats:system/bin/tegrastats \
