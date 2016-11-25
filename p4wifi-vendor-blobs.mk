@@ -119,9 +119,10 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libsec-ril-apalone.so:system/vendor/lib/libsec-ril-apalone.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libsecril-client.so:system/vendor/lib/libsecril-client.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libwvm.so:system/vendor/libwvm.so \
-    vendor/samsung/p4wifi/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/libWVStreamControlAPI_L3.so \
-    vendor/samsung/p4wifi/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/libwvdrm_L3.so \
-    vendor/samsung/p4wifi/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/mediadrm/libwvdrmengine.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/libWVStreamControlAPI_L1.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/libwvdrm_L1.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/omxplayer.so:system/vendor/lib/omxplayer.so \
     vendor/samsung/p4wifi/proprietary/usr/share/alsa/alsa.conf:system/usr/share/alsa/alsa.conf \
     vendor/samsung/p4wifi/proprietary/usr/share/alsa/cards/aliases.conf:system/usr/share/alsa/cards/aliases.conf \
