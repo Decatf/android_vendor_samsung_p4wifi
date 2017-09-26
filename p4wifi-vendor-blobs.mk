@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/gralloc.tegra.so:system/vendor/lib/hw/gralloc.tegra.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/hwcomposer.tegra_v0.so:system/vendor/lib/hw/hwcomposer.tegra_v0.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/lights.p3.so:system/vendor/lib/hw/lights.p3.so \
-    vendor/samsung/p4wifi/proprietary/vendor/lib/hw/sensors.p3.so:system/vendor/lib/hw/sensors.p3.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/hw/sensors.p3.so:system/vendor/lib/hw/sensors.tegra_v0.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/lib_Samsung_Resampler.so:system/vendor/lib/lib_Samsung_Resampler.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libakm.so:system/vendor/lib/libakm.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libardrv_dynamic.so:system/vendor/lib/libardrv_dynamic.so \
