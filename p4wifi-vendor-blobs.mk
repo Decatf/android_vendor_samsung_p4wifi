@@ -35,6 +35,8 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/etc/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd \
     vendor/samsung/p4wifi/proprietary/etc/firmware/maxtouch.cfg:root/lib/firmware/maxtouch.cfg \
     vendor/samsung/p4wifi/proprietary/etc/firmware/maxtouch.fw:root/lib/firmware/maxtouch.fw \
+    vendor/samsung/p4wifi/proprietary/etc/firmware/maxtouch.cfg:recovery/root/lib/firmware/maxtouch.cfg \
+    vendor/samsung/p4wifi/proprietary/etc/firmware/maxtouch.fw:recovery/root/lib/firmware/maxtouch.fw \
     vendor/samsung/p4wifi/proprietary/etc/firmware/nvmm_aacdec.axf:system/etc/firmware/nvmm_aacdec.axf \
     vendor/samsung/p4wifi/proprietary/etc/firmware/nvmm_adtsdec.axf:system/etc/firmware/nvmm_adtsdec.axf \
     vendor/samsung/p4wifi/proprietary/etc/firmware/nvmm_h264dec.axf:system/etc/firmware/nvmm_h264dec.axf \
