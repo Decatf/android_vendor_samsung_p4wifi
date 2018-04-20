@@ -33,8 +33,6 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt \
     vendor/samsung/p4wifi/proprietary/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt:system/etc/audio/Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt \
     vendor/samsung/p4wifi/proprietary/etc/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd \
-    vendor/samsung/p4wifi/proprietary/etc/firmware/maxtouch.cfg:system/etc/firmware/maxtouch.cfg \
-    vendor/samsung/p4wifi/proprietary/etc/firmware/maxtouch.fw:system/etc/firmware/maxtouch.fw \
     vendor/samsung/p4wifi/proprietary/etc/firmware/nvmm_aacdec.axf:system/etc/firmware/nvmm_aacdec.axf \
     vendor/samsung/p4wifi/proprietary/etc/firmware/nvmm_adtsdec.axf:system/etc/firmware/nvmm_adtsdec.axf \
     vendor/samsung/p4wifi/proprietary/etc/firmware/nvmm_h264dec.axf:system/etc/firmware/nvmm_h264dec.axf \
