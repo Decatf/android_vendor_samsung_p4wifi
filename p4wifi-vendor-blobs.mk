@@ -58,8 +58,6 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/audio_policy.vendor.tegra.so:system/vendor/lib/hw/audio_policy.vendor.tegra.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/camera.vendor.tegra.so:system/vendor/lib/hw/camera.vendor.tegra.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/gps.tegra.so:system/vendor/lib/hw/gps.tegra.so \
-    vendor/samsung/p4wifi/proprietary/vendor/lib/hw/gralloc.tegra.so:system/vendor/lib/hw/gralloc.tegra.so \
-    vendor/samsung/p4wifi/proprietary/vendor/lib/hw/hwcomposer.tegra_v0.so:system/vendor/lib/hw/hwcomposer.tegra_v0.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/hw/sensors.p3.so:system/vendor/lib/hw/sensors.tegra_v0.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/lib_Samsung_Resampler.so:system/vendor/lib/lib_Samsung_Resampler.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libakm.so:system/vendor/lib/libakm.so \
