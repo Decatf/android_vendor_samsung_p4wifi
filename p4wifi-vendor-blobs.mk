@@ -81,6 +81,7 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvcpud_client.so:system/vendor/lib/libnvcpud_client.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvcpud.so:system/vendor/lib/libnvcpud.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvddk_2d.so:system/vendor/lib/libnvddk_2d.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/libnvddk_2d_v2.so:system/vendor/lib/libnvddk_2d_v2.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvddk_audiofx.so:system/vendor/lib/libnvddk_audiofx.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvdispatch_helper.so:system/vendor/lib/libnvdispatch_helper.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvdispmgr_d.so:system/vendor/lib/libnvdispmgr_d.so \
@@ -117,7 +118,9 @@ PRODUCT_COPY_FILES := \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvomxilclient.so:system/vendor/lib/libnvomxilclient.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvomx.so:system/vendor/lib/libnvomx.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvparser.so:system/vendor/lib/libnvparser.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/libnvrm_graphics.so:system/vendor/lib/libnvrm_graphics.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvrm_channel.so:system/vendor/lib/libnvrm_channel.so \
+    vendor/samsung/p4wifi/proprietary/vendor/lib/libnvrm.so:system/vendor/lib/libnvrm.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvsm.so:system/vendor/lib/libnvsm.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvstereoutils_jni.so:system/vendor/lib/libnvstereoutils_jni.so \
     vendor/samsung/p4wifi/proprietary/vendor/lib/libnvsystemuiext_jni.so:system/vendor/lib/libnvsystemuiext_jni.so \
